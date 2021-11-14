@@ -1,0 +1,404 @@
+:root {
+    /* colors */
+    --clr-dark: #0B0D17;
+    --clr-sky-blue: #D0D6F9;
+    --clr-white: #FFFFFF;
+    --clr-white-blur: #ada8a8;
+    /* font */
+    --fs-900: 9.375rem;
+    /*150px*/
+    --fs-800: 6.25rem;
+    /*100px*/
+    --fs-700: 3.5rem;
+    /*56px*/
+    --fs-600: 2rem;
+    /*32px*/
+    --fs-500: 1.75rem;
+    /*28px*/
+    --fs-400: 1.125rem;
+    /*18px*/
+    --fs-300: 1rem;
+    /*16px*/
+    --fs-200: 0.875rem;
+    /*14px*/
+    /* font families */
+    --ff-serif: "Bellefair", serif;
+    --ff-sans-condensed: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Barlow", sans-serif;
+}
+
+
+/* style reset */
+
+*,
+ ::before,
+ ::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-400);
+    background-color: var(--clr-dark);
+    color: var(--clr-white);
+}
+
+img,
+picture,
+figure {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+}
+
+.bg-design {
+    background-image: url(../assets/home/background-home-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* Global class */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.f-jc-sb {
+    justify-content: space-between;
+}
+
+.f-al-c {
+    align-items: center;
+}
+
+
+/* color utility class */
+
+.bg-dark {
+    background-color: var(--clr-dark);
+}
+
+.bg-sky-blue {
+    background-color: var(--clr-sky-blue);
+}
+
+.bg-white {
+    background-color: var(--clr-white);
+}
+
+.bg-white-blur {
+    background: #ada8a8;
+}
+
+.txt-dark {
+    color: var(--clr-dark);
+}
+
+.txt-sky-blue {
+    color: var(--clr-white);
+}
+
+.txt-white {
+    color: var(--clr-white);
+}
+
+.home-bg {
+    background: url(../assets/home/background-home-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: cover;
+}
+
+
+/* components */
+
+.container {
+    margin-left: 3rem;
+    padding: 0;
+}
+
+
+/* typography */
+
+.ff-serif {
+    font-family: var(--ff-serif);
+}
+
+.ff-sans-condensed {
+    font-family: var(--ff-sans-condensed);
+}
+
+.ff-sans-normal {
+    font-family: var(--ff-sans-normal);
+}
+
+
+/* letter spacing */
+
+.letter-spacing-1 {
+    letter-spacing: 0.297rem;
+    /* 4.75px*/
+}
+
+.letter-spacing-2 {
+    letter-spacing: 0.169rem;
+    /* 2.7px*/
+}
+
+.letter-spacing-2 {
+    letter-spacing: 0.147rem;
+    /* 2.35px*/
+}
+
+
+/* letter case */
+
+.U-case {
+    text-transform: uppercase;
+}
+
+
+/* opacity */
+
+.op-1 {
+    opacity: .5;
+}
+
+
+/* font-size */
+
+.fs-900 {
+    font-size: var(--fs-900);
+}
+
+.fs-800 {
+    font-size: var(--fs-800);
+}
+
+.fs-700 {
+    font-size: var(--fs-700);
+}
+
+.fs-600 {
+    font-size: var(--fs-600);
+}
+
+.fs-900 {
+    font-size: var(--fs-900);
+}
+
+.fs-500 {
+    font-size: var(--fs-500);
+}
+
+.fs-400 {
+    font-size: var(--fs-400);
+}
+
+.fs-300 {
+    font-size: var(--fs-300);
+}
+
+.fs-200 {
+    font-size: var(--fs-200);
+}
+
+
+/* header and navigation bar */
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.pg-header {
+    display: flex;
+    justify-content: space-between;
+    /* background: red; */
+    margin-top: 1.5rem;
+    align-items: center;
+    overflow: hidden;
+    padding: 25px 0;
+}
+
+.pg-header>.navigation {
+    display: flex;
+    list-style: none;
+    align-items: flex-start;
+    padding-left: 32px;
+    min-width: 60%;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(81.5485px);
+}
+
+.hamburger {
+    display: none;
+}
+
+.navigation>li {
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: var(--fs-300);
+    padding: 30px 12px;
+    letter-spacing: 2.7;
+}
+
+.navigation li span {
+    padding: 0 8px;
+    font-weight: bolder;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: var(--clr-white);
+}
+
+.navigation li:hover {
+    border-bottom: 3px solid var(--clr-white);
+}
+
+.navigation li:active {
+    border-bottom: 3px solid #ada8a8;
+}
+
+.hm-pg-txt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+    padding: var(--fs-500);
+}
+
+.banner-text {
+    width: 40%;
+}
+
+.banner-text h3 {
+    font-size: var(--fs-300);
+    color: var(--clr-sky-blue);
+    letter-spacing: 4.72;
+}
+
+.banner-text h1 {
+    font-family: "Bellefair", serif;
+    font-size: var(--fs-800);
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-text p {
+    font-size: var(--fs-300);
+    color: var(--clr-sky-blue);
+}
+
+.explore {
+    width: 40%;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.explore-btn button {
+    background-color: white;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 50%;
+    font-size: var(--fs-500);
+    border: none;
+    font-family: var(--ff-serif);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+/* media queries */
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url(../assets/home/background-home-tablet.jpg);
+    }
+    .container {
+        width: 90%;
+        margin: auto;
+        padding: 1rem;
+        min-height: 100vh;
+    }
+    .navigation li {
+        font-size: var(--fs-200)
+    }
+    .hm-pg-txt {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1.5rem;
+        text-align: center;
+    }
+    .explore {
+        width: 100%;
+        text-align: center;
+    }
+    .banner-text {
+        width: 100%;
+    }
+    .explore-btn button {
+        background-color: white;
+        min-width: 200px;
+        min-height: 200px;
+        border-radius: 50%;
+        font-size: var(--fs-500);
+        border: none;
+        font-family: var(--ff-serif);
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 0;
+        margin: auto;
+    }
+    .navigation li {
+        display: none;
+        overflow: hidden;
+    }
+    .hamburger {
+        display: block;
+    }
+    .hm-pg-txt {
+        padding: 0;
+    }
+    .banner-text h1 {
+        font-size: 80px;
+    }
+    .banner-text h3 {
+        font-size: 16px;
+    }
+    .banner-text p {
+        font-size: 15px;
+    }
+}
